@@ -6,4 +6,7 @@
     <string name="giroscopio">Giroscopio</string>
     <string name="luz">Luz</string>
     <string name="acelerometro">Acelerometro</string>
+    <string name="valor1">Valor 1</string>
+    <string name="valor2">Valor 2</string>
+    <string name="valor3">Valor 3</string>
 </resources>

@@ -34,11 +34,11 @@ class ProximidadeFragment : Fragment(), SensorEventListener {
             text = textProximity.findViewById(R.id.textProximity)
         }
         sensorManager = requireActivity().getSystemService(Context.SENSOR_SERVICE) as SensorManager
+
         if (sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY) != null) {
             proximitySensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
             isProximitySensorManager = true;
         } else {
-            text.setText("Proximity sensor is not available");
             isProximitySensorManager = false;
         }
         return binding.root
@@ -46,12 +46,16 @@ class ProximidadeFragment : Fragment(), SensorEventListener {
 
     override fun onSensorChanged(event: SensorEvent?) {
         if (event != null) {
-           binding.textProximity.text = event.values.toString()
+            if(event.sensor.type == Sensor.TYPE_PROXIMITY){
+                text.setText(event.values[0].toFloat().toString());
+            }else {
+                text.setText("Away")
+            }
         }
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        TODO("Not yet implemented")
+        return
     }
 
     override fun onResume() {
