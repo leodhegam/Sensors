@@ -22,6 +22,7 @@ class GiroscopioFragment : Fragment(),SensorEventListener {
     lateinit var giroscopioSensor: Sensor
     private lateinit var text: TextView
     private var isGyroscopeSensorManager: Boolean? = false
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {

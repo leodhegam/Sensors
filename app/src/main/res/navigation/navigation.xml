@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.tads.sensors.fragments.HomeFragment"
-        android:label="fragment_home"
+        android:label="Sensors"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_acelerometroFragment"
@@ -27,22 +27,38 @@
         android:id="@+id/acelerometroFragment"
         android:name="com.tads.sensors.fragments.AcelerometroFragment"
         android:label="fragment_acelerometro"
-        tools:layout="@layout/fragment_acelerometro" />
+        tools:layout="@layout/fragment_acelerometro" >
+        <action
+            android:id="@+id/action_acelerometroFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/giroscopioFragment"
         android:name="com.tads.sensors.fragments.GiroscopioFragment"
         android:label="fragment_giroscopio"
-        tools:layout="@layout/fragment_giroscopio" />
+        tools:layout="@layout/fragment_giroscopio" >
+        <action
+            android:id="@+id/action_giroscopioFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/luzFragment"
         android:name="com.tads.sensors.fragments.LuzFragment"
         android:label="fragment_luz"
-        tools:layout="@layout/fragment_luz" />
+        tools:layout="@layout/fragment_luz" >
+        <action
+            android:id="@+id/action_luzFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/proximidadeFragment"
         android:name="com.tads.sensors.fragments.ProximidadeFragment"
         android:label="fragment_proximidade"
-        tools:layout="@layout/fragment_proximidade" />
+        tools:layout="@layout/fragment_proximidade" >
+        <action
+            android:id="@+id/action_proximidadeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <activity
         android:id="@+id/mainActivity"
         android:name="com.tads.sensors.MainActivity"

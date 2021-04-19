@@ -31,6 +31,7 @@ class LuzFragment : Fragment(), SensorEventListener {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_luz, container, false)
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
     binding.apply {
         text = tvText.findViewById(R.id.tv_text)
         pb = circularProgressBar.findViewById(R.id.circularProgressBar)
